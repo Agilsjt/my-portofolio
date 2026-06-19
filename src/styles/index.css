@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root.dark {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(61, 231, 255, 0.3);
+  color: #ffffff;
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10;
+}
+
+.section-title {
+  @apply text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl dark:text-white;
+}
+
+.section-kicker {
+  @apply mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-sky-600 dark:text-cyanGlow;
+}
+
+.glass-panel {
+  @apply border border-slate-200/80 bg-white/70 shadow-xl shadow-slate-200/50 backdrop-blur-xl dark:border-line dark:bg-white/[0.055] dark:shadow-black/20;
+}
+
+.focus-ring {
+  @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyanGlow;
+}
